@@ -1,0 +1,1 @@
+SELECT secret FROM images WHERE id = $1;

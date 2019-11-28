@@ -1,0 +1,1 @@
+SELECT command, status_code, success, points from vulnerabilities where image_id = $1;

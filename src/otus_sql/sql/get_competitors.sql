@@ -1,0 +1,1 @@
+SELECT id, name, score FROM competitors WHERE image_id = $1;

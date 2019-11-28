@@ -1,0 +1,1 @@
+SELECT image_id FROM competitors WHERE id = $1;

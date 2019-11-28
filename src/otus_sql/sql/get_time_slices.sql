@@ -1,0 +1,1 @@
+SELECT timestamp, current_points FROM time_slices WHERE competitor = $1;

@@ -1,0 +1,1 @@
+SELECT id from images WHERE name = $1;

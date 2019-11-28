@@ -1,0 +1,1 @@
+SELECT name, download, description FROM images;
