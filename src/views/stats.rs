@@ -10,11 +10,8 @@ pub fn stats(sql: rocket::State<HashMap<String, String>>, conn: OtusDb, competit
     for vulnerability in db.get_vulnerabilities(db.competitor_to_image(competitor_id)) {
         max_score += vulnerability.points;
     }
-    db.
-    println!("{}", max_score);
     json!({
         "max_score": max_score,
-        "vulns_solved":
         "time_slices": db.get_time_slices(competitor_id)
     })
 }
