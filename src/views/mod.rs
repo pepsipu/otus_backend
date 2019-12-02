@@ -6,3 +6,4 @@ pub mod delete_image;
 pub mod get_competitors;
 pub mod heartbeat;
 pub mod stats;
+pub mod updates;

@@ -25,3 +25,8 @@ CREATE TABLE time_slices (
     current_points int,
     timestamp timestamptz default now()
 );
+CREATE TABLE updates (
+    header varchar(255),
+    content varchar(65535),
+    timestamp timestamptz default now()
+);

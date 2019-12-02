@@ -137,4 +137,18 @@ impl<'sql, 'conn> OtusSql<'sql, 'conn> {
         }
         id
     }
+    pub fn update_score(&self, id: i32, score: i32) {
+        self.conn.execute(&self.sql["update_score.sql"], &[&id, &score]);
+    }
+    pub fn get_updates(&self) -> Vec<crate::serial::Update> {
+        let mut updates: Vec<crate::serial::Update> = Vec::new();
+        for row in &self.conn.query(&(self.sql["get_updates"]), &[]).unwrap() {
+            updates.push(crate::serial::Update {
+                header: row.get(0),
+                content: row.get(1),
+                timestamp: row.get(2)
+            })
+        }
+        updates
+    }
 }

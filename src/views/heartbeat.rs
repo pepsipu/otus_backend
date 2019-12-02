@@ -29,6 +29,7 @@ pub fn heartbeat(sql: rocket::State<HashMap<String, String>>, conn: OtusDb, hear
         });
     }
     db.create_time_slice(competitor_id, score);
+    db.update_score(competitor_id, score);
     json!({
         "score": score,
         "success": true

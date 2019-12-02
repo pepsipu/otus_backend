@@ -40,6 +40,7 @@ fn main() -> Result<()> {
             views::get_competitors::get_competitors,
             views::heartbeat::heartbeat,
             views::stats::stats,
+            views::updates::updates
         ])
         .manage(sql_statements)
         .attach(OtusDb::fairing())

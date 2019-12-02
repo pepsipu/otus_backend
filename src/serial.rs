@@ -54,3 +54,10 @@ pub struct TimeSlice {
     pub current_points: i32,
     pub timestamp: chrono::DateTime<chrono::Utc>
 }
+
+#[derive(Serialize, Deserialize)]
+pub struct Update {
+    pub header: String,
+    pub content: String,
+    pub timestamp: chrono::DateTime<chrono::Utc>
+}

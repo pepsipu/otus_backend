@@ -1,0 +1,1 @@
+UPDATE competitors SET score = $1 WHERE id = $2;
